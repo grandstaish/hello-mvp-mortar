@@ -33,8 +33,8 @@ public class HelloFragment2 extends Fragment {
                 .inflate(R.layout.fragment_hello2, container, false);
     }
 
-    @Override public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    @Override public void onResume() {
+        super.onResume();
         isDestroyedBySystem = false;
     }
 
