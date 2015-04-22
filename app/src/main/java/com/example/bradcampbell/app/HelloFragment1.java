@@ -14,7 +14,7 @@ import static com.squareup.mortar.MortarScope.buildChild;
 import static com.squareup.mortar.MortarScope.findChild;
 
 public class HelloFragment1 extends Fragment {
-    private boolean isDestroyedBySystem = false;
+    private boolean isDestroyedBySystem;
     private MortarScope fragmentScope;
 
     @Override public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class HelloFragment1 extends Fragment {
 
     @Override public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        isDestroyedBySystem = false;
     }
 
     @Override public void onSaveInstanceState(@NonNull Bundle outState) {
